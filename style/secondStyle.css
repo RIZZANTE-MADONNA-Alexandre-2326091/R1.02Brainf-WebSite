@@ -8,7 +8,7 @@ iframe{
     display: flex;
     align-self: center;
     width: 70%;
-    height: 50%;
+    margin-bottom: 40px;    
 }
 
 nav{        /*Menu du site*/
