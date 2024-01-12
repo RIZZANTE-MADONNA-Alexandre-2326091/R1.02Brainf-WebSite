@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Brainf***: Acceuil</title>   <!--Titre du site-->
+        <meta charset="utf-8">             <!--Métadonnées: encodage,auteurs,description,lien vers favicon, feuilles de style et script-->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=10">
+        <meta name="author" content="Rizzante--Madonna Alexandre">
+        <meta name="author" content="Fabre Alexandre">
+        <meta name="description" content="Un site présentant ce langage exotique qu'est Brainf*** pour le présenter et l'expliquer.">
+        <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <link rel="icon" href="favicon.ico">
+        <script src="js/script.js" async></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="titre">Présentation d'un langage exotique et original: Brainf***</h1>   <!--Titre dans l'entête-->
+        </header>
+        <nav id="menu">         <!--Menu pour changer de page et de style-->
+            <a href="#" onclick="changeCSS('style/mainStyle.css', 0);">Style principal</a> 
+            <a href="#" onclick="changeCSS('style/secondStyle.css', 0);">Style secondaire</a>
+            <p><span class="gras">Menu du site:</span></p>
+            <p>Vous êtes sur la page d'acceuil.</p>
+            <ul>
+                <li><a href="bfexplain.html">Explication du langage</a></li>
+                <li><a href="sources.html">Sources utilisées</a></li>
+            </ul>
+        </nav>
+        <div id="presentation">     <!--Contenu de la page-->
+            <h2 id="bienvenue">Bienvenue!</h2>  <!--Affiche la chaîne de caractères:"Bienvenue!"-->
+            <p class="corps">
+                Vous vous trouvez sur un site dont le thème est le langage Brainf***.
+                Ce site va vous présenter et expliquer ce langage dit exotique.<br>
+            </p>
+            <p class="corps">
+                Sur ce site, vous trouverez en-tête le titre du site. A votre gauche, vous trouverez le menu pour savoir sur quelle page vous vous trouvez ainsi que changer de page avec la possibilité de changer de style.
+                Au centre, vous trouverez le corps du site avec son contenu. Au pied de page, vous trouverez un formulaire pour laisser un avis sur le site ainsi que ses auteurs.
+            </p>
+            <p class="corps">
+                Vous vous retrouvez sur la page d'acceuil du site.<br>
+                <span class="gras">Ordre de navigation recommandé: </span></p>
+            <p class="corps">Pour une expérience optimale, nous vous recommandons de commencer par la page <a href="bfexplain.html">Explication du langage</a>
+                dans lequel nous vous présentons et expliquons le langage, c'est-à-dire comment il fonctionne et comment programmer avec.<br>
+                Enfin, vous pouvez visitez la page des <a href="sources.html">Sources utilisées</a> pour connaître les sources dans notre travail de recherche dans le langage, 
+                mais aussi pour la création du site. 
+            </p>
+            <p class="corps">J'espère que vous apprécirez parcourir notre site Web sur le langage exotique Brainf***.</p>
+        </div>
+        <footer>    <!--Pied de page contenant le formulaire pour déposer les avis, l'ancrage vers le haut de la page et les crédits du site-->
+            <form id="formAvis" action="mailto:alexandre.rizzante-madonna@etu.univ-amu.fr?content-type=text/html" method="post" enctype="text/plain">
+                <!--Formulaire pour receuillir les avis: nom,prénom,e-mail,sexe;téléphone,commentaire-->
+                <p id="contenuForm">
+                    <span id="titreAvis">Donner vos impressions sur notre site!</span><br>
+                    <label for="prenom">Prénom:    </label><input id="prenom" type="text" name="Prenom" placeholder="Entrer votre nom" required="required">
+                    <label for="nom">Nom:    </label><input id="nom" type="text" name="Nom" placeholder="Entrer votre prénom" required="required">
+                    <label for="email">E-mail:    </label><input id="email" type="email" name="E-mail" pattern="^[a-z._1-9]+@[a-z]+\.[a-z]{2,}$" autocomplete="on" required="required" placeholder="Entrer votre e-mail.">
+                    <input id="sexeHomme" type="radio" name="sexe" value="Homme"><label for="sexeHomme">Homme</label> 
+                    <input id="sexeFemme" type="radio" name="sexe" value="Femme"><label for="sexeFemme">Femme</label>
+                    <label for="telephone">Téléphone:    </label><input id="telephone" type="tel" name="Telephone" placeholder="Entrer votre numéro de téléphone.">
+                    <label for="commentaire">Avis:</label>
+                    <textarea id="commentaire" name="Commentaire" required="required" placeholder="Veuillez saisir un commentaire sur le site." rows="5" cols="20"></textarea>
+                    <input type="reset" name="reinitialiser" id="reinitialiser" value="Réinitialiser">
+                    <input type="submit" name="enregistrer" id="envoi" value="Envoyer votre avis">
+                </p>
+            </form>
+            <a id="ancrage" href="#titre">Retour en haut de page.</a>
+            <p id="auteurs">Réalisé par Alexandre Rizzante--Madonna et Alexandre Fabre, 1ère année BUT Informatique Groupe 1</p>
+        </footer>
+    </body>
+</html>
