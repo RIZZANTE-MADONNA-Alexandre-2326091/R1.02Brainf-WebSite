@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Brainf***: Explication</title>   <!--Titre du site-->
+        <meta charset="utf-8">             <!--Métadonnées: encodage,auteurs,description,lien vers favicon, feuilles de style et script-->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=10">
+        <meta name="author" content="Rizzante--Madonna Alexandre">
+        <meta name="author" content="Fabre Alexandre">
+        <meta name="description" content="Un site présentant ce langage exotique qu'est Brainf*** pour le présenter et l'expliquer.">
+        <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <link rel="icon" href="favicon/favicon.ico">
+        <script src="js/script.js" async></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="titre">Présentation d'un lagage exotique et original: Brainf***</h1>   <!--Titre dans l'entête-->
+        </header>
+        <nav id="menu">         <!--Menu pour changer de page et de style-->
+            <a href="#" onclick="changeCSS('style/mainStyle.css', 0);">Style principal</a> 
+            <a href="#" onclick="changeCSS('style/secondStyle.css', 0);">Style secondaire</a>
+            <p>Menu du site:</p>
+            <p>Vous êtes sur la page de l'explication du langage.</p>
+            <ul>
+                <li><a href="index.html">Page d'acceuil</a></li>
+                <li><a href="sources.html">Sources utilisées</a></li>
+            </ul>
+        </nav>
+        <div id="explication" class="corps">    <!--Partie de la présentation du langage-->
+            <p>Dans cette page, nous allons vous présenter, expliquer le langage, c'est-à-dire comment coder.<br><span class="gras">Présentation du langage: </span>Brainf*** est un langage Turing-complet de programmation exotique inventé en 1993 par Urban Müller. 
+                Ce langage est qualifié d’exotique car il a été créé en tant qu’exercice intellectuel, sans avoir l'objectif d'être utile pour les développeurs.
+                Le but de Müller est de créer le compilateur le plus petit possible et ce dernier fait en effet 171 octets seulement dans sa version actuelle! 
+                À l'instar de la machine de Turing, il consiste en un tableau initial de taille 30000 dont chaque élément fait 1 octet, un pointeur positionné 
+                sur la première case du tableau à l'index 0 avec tous les éléments initialisés et de deux files de 1 octet pour les entrées et les sorties.
+            </p>
+                <p><span class="gras">Explication du langage: </span>Il y a 8 opérateurs dont ils correspondent à une fonctionnalité de la machine de Turing:</p>
+                    <ul>    <!--Présentation des opérateurs-->
+                    <li>L'opérateur <span class="gras">&lt;</span>: Déplace le curseur vers la gauche.</li>
+                    <li>L'opérateur <span class="gras">&gt;</span>: Déplace le curseur vers la droite.</li>
+                    <li>L'opérateur <span class="gras">-</span>: Décrémente la valeur pointée par une case.</li>
+                    <li>L'opérateur <span class="gras">+</span>: Incrémente la valeur pointée par une case.</li>
+                    <li>L'opérateur <span class="gras">[</span>: Ouverture d'une boucle tant que la valeur pointée par la case ne vaut pas 0</li>
+                    <li>L'opérateur <span class="gras">]</span>: Tant que la boucle initialisée par l'opérateur '[' continue, 
+                        c'est-à-dire que la valeur de la case pointée ne vaut pas 0, on revient à '['.</li>
+                    <li>L'opérateur <span class="gras">.</span>: Renvoie la valeur de la case pointée.</li>
+                    <li>L'opérateur <span class="gras">,</span>: Prend en entrée un nombre et l'insère dans la case pointée.</li>
+                </ul>
+            <p>Les valeurs dans le tableau sont des nombres et on peut afficher des caractères avec leur nombre ASCII.
+                Avec ce langage, on peut réaliser aussi des opérations élémentaires telles que l'addition ou encore la multiplication.
+                On peut aussi réaliser des structures conditionnelles pour vérifier la valeur d'un nombre.
+            </p>
+            <p>Voici un exemple de code:</p>
+            <code>  <!--Exemple de code-->
+                +++++[&gt;+++++++++++++&lt;-]&gt;.       Vaut la lettre A<br>
+                ++++++++[&gt;++++++++++++&lt;-]&gt;.     Vaut la lettre l<br>
+                &lt;++[&gt;---&lt;-]&gt;-.               Vaut la lettre e<br>
+                &lt;+++++[&gt;++++&lt;-]&gt;-.           Vaut la lettre x<br>
+                &lt;++++++[&gt;----&lt;-]&gt;+.          Vaut la lettre a<br>
+                &lt;++++[&gt;+++&lt;-]&gt;+.             Vaut la lettre n<br>
+                &lt;+++++[&gt;--&lt;-]&gt;.              Vaut la lettre d<br>
+                &lt;++++[&gt;+++&lt;-]&gt;++.            Vaut la lettre r<br>
+                &lt;++++[&gt;---&lt;-]&gt;-.             Vaut la lettre e<br>
+            </code><br>
+            <!--Lien vers un interpréteur et une vidéo.-->
+            <a href="https://copy.sh/brainfuck/">Interpréteur Gratuit</a><br>
+            <p>Voici un exemple de mot réalisé en Brainf*** avec sous-titrages en Français</p>
+            <iframe src="https://youtu.be/uubsaQBVTBI"></iframe>
+        </div>
+        <form id="quiz" name="question">
+            <p>Voici une question sur ce que vous avez appris. Quel est le nombre dans la case d'index 2?<br>
+            &gt;&gt;--++&gt;+++&lt;&lt;+&gt;+++++</p>
+            <label for="reponse">Réponse: </label><input id="reponse" name="Reponse" type="number" placeholder="Entrer votre réponse" required="required"><br>
+            <input id="valider" type="button" name="Valider" value="Valider votre réponse" onclick="jeuQuiz()">
+            <p id="reponseQuiz"></p>
+        </form>
+        <footer>    <!--Pied de page contenant le formulaire pour déposer les avis, l'ancrage vers le haut de la page et les crédits du site-->
+            <form id="formAvis" action="mailto:alexandre.rizzante-madonna@etu.univ-amu.fr?content-type=text/html" method="post" enctype="text/plain">
+                <!--Formulaire pour receuillir les avis: nom,prénom,e-mail,sexe;téléphone,commentaire-->
+                <p id="contenuForm">
+                    <span id="titreAvis">Donner vos impressions sur notre site!</span><br>
+                    <label for="prenom">Prénom:    </label><input id="prenom" type="text" name="Prenom" placeholder="Entrer votre nom" required="required">
+                    <label for="nom">Nom:    </label><input id="nom" type="text" name="Nom" placeholder="Entrer votre prénom" required="required">
+                    <label for="email">E-mail:    </label><input id="email" type="email" name="E-mail" pattern="^[a-z._1-9]+@[a-z]+\.[a-z]{2,}$" autocomplete="on" required="required" placeholder="Entrer votre e-mail.">
+                    <input id="sexeHomme" type="radio" name="sexe" value="Homme"><label for="sexeHomme">Homme</label> 
+                    <input id="sexeFemme" type="radio" name="sexe" value="Femme"><label for="sexeFemme">Femme</label>
+                    <label for="telephone">Téléphone:    </label><input id="telephone" type="tel" name="Telephone" placeholder="Entrer votre numéro de téléphone.">
+                    <label for="commentaire">Avis:</label>
+                    <textarea id="commentaire" name="Commentaire" required="required" placeholder="Veuillez saisir un commentaire sur le site." rows="5" cols="20"></textarea>
+                    <input type="reset" name="reinitialiser" id="reinitialiser" value="Réinitialiser">
+                    <input type="submit" name="enregistrer" id="envoi" value="Envoyer votre avis">
+                </p>
+            </form>
+            <a id="ancrage" href="#titre">Retour en haut de page.</a>
+            <p id="auteurs">Réalisé par Alexandre Rizzante--Madonna et Alexandre Fabre, 1ère année BUT Informatique Groupe 1</p>
+        </footer>
+    </body>
+</html>

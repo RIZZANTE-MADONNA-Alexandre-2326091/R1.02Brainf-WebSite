@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>Brainf***: Sources</title>   <!--Titre du site-->
+        <meta charset="utf-8">             <!--Métadonnées: encodage,auteurs,description,lien vers favicon, feuilles de style et script-->
+        <meta name="viewport" content="width=device-width, minimum-scale=1, maximum-scale=10">
+        <meta name="author" content="Rizzante--Madonna Alexandre">
+        <meta name="author" content="Fabre Alexandre">
+        <meta name="description" content="Un site présentant ce langage exotique qu'est Brainf*** pour le présenter et l'expliquer.">
+        <link rel="stylesheet" type="text/css" href="style/mainStyle.css">
+        <link rel="icon" href="favicon/favicon.ico">
+        <script src="js/script.js" async></script>
+    </head>
+    <body>
+        <header>
+            <h1 id="titre">Présentation d'un lagage exotique et original: Brainf***</h1>   <!--Titre dans l'entête-->
+        </header>
+        <nav id="menu">         <!--Menu pour changer de page et de style-->
+            <a href="#" onclick="changeCSS('style/mainStyle.css', 0);">Style principal</a> 
+            <a href="#" onclick="changeCSS('style/secondStyle.css', 0);">Style secondaire</a>
+            <p>Menu du site:</p>
+            <p>Vous êtes sur la page du receuil des sources.</p>
+            <ul>
+                <li><a href="index.html">Page d'acceuil</a></li>
+                <li><a href="bfexplain.html">Explication du langage</a></li>
+            </ul>
+        </nav>
+        <div id="lienSources" class="corps">    <!--Listes des sources-->
+            <p>Voici les sources utilisées sur le langage:</p>
+            <ul>        <!--Liens des sources sur le langage-->
+                <li><a href="https://fr.wikipedia.org/wiki/Brainfuck">Wikipedia Brainf***</a></li>
+                <li><a href="https://www.youtube.com/watch?v=hdHjjBS4cs8">Vidéo Youtube</a></li>
+                <li><a href="https://www.techno-science.net/glossaire-definition/Brainfuck.html">Techno-Science</a></li>
+                <li><a href="https://gist.github.com/roachhd/dce54bec8ba55fb17d3a">Guide langage (GitHub)</a></li>
+            </ul>
+            <br>
+            <p>Voici toutes les sources utilisées pour fabriquer le site:</p>
+            <ul>        <!--Liens des sources pour le site-->
+                <li><a href="https://mickael-martin-nevot.com/univ-amu/iut/but-informatique/developpement-d-interfaces-web/">CM + Ressources</a></li>
+                <li><a href="https://developer.mozilla.org/fr/docs/Web">Documentation Mozilla</a></li>
+                <li><a href="https://help.alwaysdata.com/fr/">Documentation alwaysdata</a></li>
+                <li><a href="https://stackoverflow.com/questions/19844545/replacing-css-file-on-the-fly-and-apply-the-new-style-to-the-page">Changement CSS avec JS</a></li>
+                <li><a href="https://www.alsacreations.com/article/lire/1647-Synchroniser-son-serveur-web-avec-Github.html">Lien avec GitHub</a></li>
+                <li><a href="https://www.w3schools.com/html/html_youtube.asp">Insérer une vidéo Youtube</a></li>
+            </ul>
+        </div>
+        <footer>    <!--Pied de page contenant le formulaire pour déposer les avis, l'ancrage vers le haut de la page et les crédits du site-->
+            <form id="formAvis" action="mailto:alexandre.rizzante-madonna@etu.univ-amu.fr?content-type=text/html" method="post" enctype="text/plain">
+                <!--Formulaire pour receuillir les avis: nom,prénom,e-mail,sexe;téléphone,commentaire-->
+                <p id="contenuForm">
+                    <span id="titreAvis">Donner vos impressions sur notre site!</span><br>
+                    <label for="prenom">Prénom:    </label><input id="prenom" type="text" name="Prenom" placeholder="Entrer votre nom" required="required">
+                    <label for="nom">Nom:    </label><input id="nom" type="text" name="Nom" placeholder="Entrer votre prénom" required="required">
+                    <label for="email">E-mail:    </label><input id="email" type="email" name="E-mail" pattern="^[a-z._1-9]+@[a-z]+\.[a-z]{2,}$" autocomplete="on" required="required" placeholder="Entrer votre e-mail.">
+                    <input id="sexeHomme" type="radio" name="sexe" value="Homme"><label for="sexeHomme">Homme</label> 
+                    <input id="sexeFemme" type="radio" name="sexe" value="Femme"><label for="sexeFemme">Femme</label>
+                    <label for="telephone">Téléphone:    </label><input id="telephone" type="tel" name="Telephone" placeholder="Entrer votre numéro de téléphone.">
+                    <label for="commentaire">Avis:</label>
+                    <textarea id="commentaire" name="Commentaire" required="required" placeholder="Veuillez saisir un commentaire sur le site." rows="5" cols="20"></textarea>
+                    <input type="reset" name="reinitialiser" id="reinitialiser" value="Réinitialiser">
+                    <input type="submit" name="enregistrer" id="envoi" value="Envoyer votre avis">
+                </p>
+            </form>
+            <a id="ancrage" href="#titre">Retour en haut de page.</a>
+            <p id="auteurs">Réalisé par Alexandre Rizzante--Madonna et Alexandre Fabre, 1ère année BUT Informatique Groupe 1</p>
+        </footer>
+    </body>
+</html>

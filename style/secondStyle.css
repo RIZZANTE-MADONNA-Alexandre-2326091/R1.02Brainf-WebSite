@@ -1,0 +1,239 @@
+body{       /*Couleur d'arrière-plan du site*/
+    --main-background-color: rgb(80, 80, 80);
+    background-color: var(--main-background-color);
+}
+
+iframe{
+    border-width: 5px;
+    display: flex;
+    align-self: center;
+    width: 70%;
+    height: 50%;
+}
+
+nav{        /*Menu du site*/
+    border-style: dashed;
+    border-width: 1px;
+    border-radius: 5px;
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 1em;
+    margin-top: 3%;
+    margin-left:71%;
+    color:lightcyan;
+    font-size:1.3rem;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+#titre{     /*Titre du site*/
+    margin: 1%;
+    padding-top: 0.8vw;
+    padding-bottom: 0.8vw;
+    padding-left: 0.3vh;
+    padding-right: 0.3vh;
+    font-size: 2em;
+    font-family:"Courier New", Courier, "Liberation Mono", monospace;
+    text-decoration: underline;
+    text-align: center;
+    font-weight: bold;
+    color: rgba(86, 30, 126, 0.7);
+    background-color: white;
+    border-radius: 15px;
+}
+
+a:link{
+    color: rgb(206, 202, 243);
+}
+
+a:visited{      /*Liens*/
+    color:rgb(98, 255, 242);
+}
+
+a:hover{
+    color:rgb(177, 224, 243);
+}
+
+a:active{
+    color:yellow;
+}
+
+a:focus{
+    font-size: 1.1em;
+}
+
+#bienvenue{     /*Corps page acceuil*/
+    font-family: Arial, Helvetica, sans-serif;
+    color:lightpink;
+    font-size: 4em;
+    font-weight: normal;
+}
+
+#presentation,#explication,#lienSources{     /*Corps principal*/
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    margin-right: 30%;
+}
+
+.corps{     /*Contenu du corps des pages*/
+    font-size: 1.2rem;
+    font-family: 'Calibri', 'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+    background-color: rgba(99, 61, 33, 0.382);
+    color: rgb(245, 245, 245);
+    text-align: justify;
+    text-indent: 2.2em;
+    padding-left: 10%;
+    border-radius: 2%;
+    margin-bottom: 1%;
+}
+
+#titreAvis{     /*Formulaire receuil avis*/
+    color:rgba(244, 158, 227, 0.9);
+    font-size: 2.2em;
+}
+
+#formAvis{
+    box-shadow: 5px 5px 10px white;
+    border-style: double;
+    border-width: 10px;
+    border-color: azure;
+    margin-top: 3em;
+    margin-right: 30%;
+}
+
+#contenuForm{
+    font-size: 1.5em;
+    font-family: Arial, Helvetica, sans-serif;
+    color: lightcoral;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+#nom, #prenom, #email, #telephone, #commentaire, #sexeHomme, #sexeFemme, #envoi, #reinitialiser{
+    font-size: 1.2em;
+}
+
+#auteurs{       /*Auteurs en pied de page*/
+    font-size: 1.1em;
+    font-family: 'Courier New', Courier, monospace;
+    color: lightgray;
+}
+
+#ancrage{   /*Encrage en fin de page*/
+    font-size: 1.4em;
+}
+
+#reinitialiser, #envoi{
+    background-color:white;
+    border-width: 2px;
+}
+
+.gras{      /*Style de police*/
+    font-weight: bold;
+}
+
+#quiz{  /*Style du questionnaire*/
+    margin-right: 30%;
+    color: rgb(157, 241, 241);
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5em;
+}
+
+#reponse, #valider{
+    font-size: 1em;
+    background-color: white;
+}
+
+@media only screen and (max-width: 850px) {
+    /* Style pour les écrans de largeur < 850px */
+    #menu{
+        z-index: 1;
+        padding-left: unset;
+        margin-left: 50%;
+        margin-top: -1em;
+        background-color: var(--main-background-color);
+        font-size: 0.9em;
+        display: flex;
+        flex-direction: column;
+    }
+    #changerStyle{
+        font-size: 1em;
+    }
+    #bienvenue{
+        text-align: start;
+        font-size: 2.5em;
+    }
+    #presentation{
+        margin-right: 10%;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .corps{
+        text-align: left;
+    }
+    #titre{
+        z-index: 1;
+        font-size: 1.5em;
+    }
+    #formAvis{
+        margin-right: 2%;
+    }
+    #nom, #prenom, #email, #telephone, #commentaire, #sexeHomme, #sexeFemme, #envoi, #reinitialiser{
+        font-size: 0.9em;
+    }
+}
+
+@media only screen and (max-height: 910px) {
+    /* Style pour les écrans de hauteur < 910px */
+    #menu{
+        margin-bottom: 50%;
+    }
+}
+
+@media only screen and (max-height: 400px) {
+    /* Style pour les écrans de hauteur < 400px */
+    #menu{
+        margin-top: -5em;
+        font-size: 0.8em;
+    }
+    #bienvenue{
+        font-size: 1.1em;
+    }
+}
+@media only screen and (max-height: 250px) {
+    /* Style pour les écrans de hauteur < 250px */
+    #menu{
+        margin-top: -5em;
+        font-size: 0.7em;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    /* Style pour les écrans de largeur < 800px */
+    #titreAvis{
+        font-size: 1.5em;
+    }
+    #bienvenue{
+        font-size: 2em;
+    }
+    .corps{
+        font-size: 0.8em;
+        text-align: right;
+    }
+    #quiz{  /*Style du questionnaire*/
+        margin-right: unset;
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1em;
+    }
+    
+    #reponse, #valider{
+        font-size: 1em;
+    }
+}
